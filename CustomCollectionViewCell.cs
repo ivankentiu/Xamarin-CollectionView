@@ -14,8 +14,7 @@ namespace collectionviewapp
 
         // initialize the cell
         [Export("initWithFrame:")]
-        public CustomCollectionViewCell(CGRect frame) : base(frame)
-        {
+        public CustomCollectionViewCell(CGRect frame) : base(frame) {
             BackgroundView = new UIView { BackgroundColor = UIColor.Orange };
 
             ContentView.Layer.BorderColor = UIColor.Blue.CGColor;
@@ -25,11 +24,10 @@ namespace collectionviewapp
             mainLabel = new UILabel();
             subLabel = new UILabel();
 
-            ContentView.AddSubviews(new UIView[] {mainLabel, subLabel});
+            ContentView.AddSubviews(new UIView[] { mainLabel, subLabel });
         }
 
-        public void UpdateCell(string text)
-        {
+        public void UpdateCell(string text) {
             mainLabel.Text = text;
             subLabel.Text = text;
             mainLabel.Frame = new CGRect(5, 5, ContentView.Bounds.Width, 26);
